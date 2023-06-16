@@ -11,8 +11,8 @@ const PORT = process.env.PORT;
 const athletesRoutes = require("./routes/athletes_routes");
 app.use("/athletes", athletesRoutes);
 
-// const adminsRoutes = require("./routes/admins_routes");
-// app.use("/admins", adminsRoutes);
+const adminsRoutes = require("./routes/admins_routes");
+app.use("/admins", adminsRoutes);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT} `);
