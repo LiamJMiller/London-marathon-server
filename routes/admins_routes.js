@@ -2,16 +2,15 @@ const express = require("express");
 const router = express.Router();
 const adminsController = require("../controller/admins_controller");
 
-// "/admin"
+// "/admins"
 
 router
   .route("/")
-  .get(adminsController.getAdmins)
+  .get(adminsController.getAdminByEmail)
   .post(adminsController.postToAdmins);
 
 router
   .route("/:adminID")
-  .put(adminsController.putAdmin)
   .delete(adminsController.deleteAdmin);
 
 module.exports = router;
