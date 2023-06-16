@@ -6,12 +6,15 @@ const athletesController = require("../controller/athletes_controller");
 
 router
   .route("/")
-  .get(athletesController.getAthletes)
   .post(athletesController.postToAthletes);
+
+router
+  .route("/:schoolID")
+  .get(athletesController.getAthletesBySchoolID)
 
 router
   .route("/:athleteID")
   .put(athletesController.putAthlete)
-  .delete(athletesController.deleteAthlete);
+  .delete(athletesController.deleteAthleteByID);
 
 module.exports = router;

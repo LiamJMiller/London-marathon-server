@@ -11,6 +11,7 @@ router
 
 router
   .route("/:schoolID")
+  .get(schoolsController.getSchoolByID)
   .put(schoolsController.putSchool)
   .delete(schoolsController.deleteSchool);
 
